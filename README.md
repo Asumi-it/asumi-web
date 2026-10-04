@@ -8,7 +8,7 @@ Sito statico, una sola pagina, senza dipendenze esterne (font self-hosted, nessu
 | `index.html` | La landing (con meta SEO, Open Graph e dati strutturati JSON-LD) |
 | `404.html` | Pagina di errore servita da GitHub Pages |
 | `fonts/` | Montserrat, Lora italic, Noto Serif JP (solo i kanji/kana usati) |
-| `assets/` | Logo ufficiale in WebP (simbolo grande, simbolo piccolo, logo con scritta) |
+| `assets/` | Logo ufficiale in WebP (simbolo grande e simbolo piccolo) |
 | `favicon-32.png`, `favicon-192.png`, `apple-touch-icon.png`, `logo.png` | Icone e logo per Google |
 | `og-image.png` | Anteprima 1200×630 per LinkedIn, WhatsApp, ecc. |
 | `robots.txt`, `sitemap.xml` | Indicizzazione motori di ricerca |
