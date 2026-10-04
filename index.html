@@ -30,12 +30,13 @@
 <meta name="twitter:image" content="https://asumi.it/og-image.png">
 
 <!-- Icone -->
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="favicon-192.png" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
 <!-- Font self-hosted (nessuna chiamata a Google: più veloce e conforme GDPR) -->
 <link rel="preload" href="fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/logo-mark.webp" as="image" type="image/webp" fetchpriority="high">
 
 <!-- Dati strutturati per motori di ricerca e assistenti AI (SEO/GEO) -->
 <script type="application/ld+json">
@@ -137,7 +138,7 @@ a{color:inherit}
   background:color-mix(in srgb,var(--sumi) 72%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .4s var(--ease)}
 .top.scrolled{border-bottom-color:var(--line-dark)}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-.brand svg{width:30px;height:auto;color:var(--kin)}
+.brand img{display:block;width:36px;height:auto}
 .brand span{font-weight:300;letter-spacing:.42em;font-size:.92rem;margin-right:-.42em}
 .nav{display:flex;gap:clamp(14px,3vw,40px);font-size:var(--step--1);letter-spacing:.18em;text-transform:uppercase}
 .nav a{text-decoration:none;color:var(--mist);position:relative;padding-block:4px;transition:color .3s}
@@ -174,8 +175,7 @@ h2{font-size:var(--step-3);line-height:1.08}
 .link{font-size:var(--step--1);letter-spacing:.24em;text-transform:uppercase;text-decoration:none;color:var(--mist);border-bottom:1px solid var(--line-dark);padding-bottom:4px;transition:color .3s}
 .link:hover{color:var(--washi)}
 .sun{position:relative;justify-self:center;width:min(100%,520px)}
-.sun svg{display:block;width:100%;height:auto;color:var(--kin);overflow:visible}
-.sun .orb{transform-box:fill-box;transform-origin:center;animation:dawn 2.4s var(--ease) both}
+.sun img{position:relative;display:block;width:100%;height:auto;animation:dawn 2.4s var(--ease) backwards}
 .sun .glow{position:absolute;inset:8% 10% 30%;border-radius:50%;background:radial-gradient(closest-side,rgba(212,175,55,.16),transparent);filter:blur(10px);pointer-events:none}
 @keyframes dawn{from{transform:translateY(7%);opacity:.55}to{transform:none;opacity:1}}
 ruby{ruby-position:over}
@@ -246,7 +246,7 @@ dl.where dd{margin:0;color:var(--washi)}
 /* ——— footer ——— */
 .foot{padding-block:48px calc(40px + env(safe-area-inset-bottom,0px));padding-inline:var(--gutter);border-top:1px solid var(--line-dark)}
 .foot .row{max-width:1240px;margin-inline:auto;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:20px 40px}
-.foot .brand svg{width:26px}
+.foot .brand img{width:clamp(120px,14vw,160px)}
 .foot .claim{font-family:var(--f-voice);font-style:italic;color:var(--mist)}
 .legal{max-width:1240px;margin:28px auto 0;font-size:.74rem;letter-spacing:.06em;color:#7d7a73;line-height:1.8}
 
@@ -300,20 +300,11 @@ dl.where dd{margin:0;color:var(--washi)}
 </head>
 <body>
 
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <!-- The Zen Horizon: arco Ensō + linea d'orizzonte (ricostruzione vettoriale dal Brand Manual) -->
-  <symbol id="enso" viewBox="0 0 200 156">
-    <path d="M158.9 114 A68 68 0 1 0 148.2 128" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
-    <path d="M93.6 7.3 A73 73 0 0 1 170.5 61.1" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".75"/>
-    <line x1="8" y1="122" x2="192" y2="122" stroke="currentColor" stroke-width="5"/>
-  </symbol>
-</svg>
-
 <div class="horizon" aria-hidden="true"><i id="progress"></i></div>
 
 <header class="top" id="top">
   <a class="brand" href="#inizio" aria-label="ASUMI, torna all'inizio">
-    <svg viewBox="0 0 200 156" aria-hidden="true"><use href="#enso"/></svg>
+    <img src="assets/logo-mark-sm.webp" width="120" height="98" alt="" decoding="async">
     <span>ASUMI</span>
   </a>
   <button class="menu" id="menu" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="nav"><i></i><i></i></button>
@@ -338,15 +329,9 @@ dl.where dd{margin:0;color:var(--washi)}
           <a class="link" href="#contatti">Contatti</a>
         </div>
       </div>
-      <div class="sun" aria-hidden="true">
+      <div class="sun">
         <div class="glow"></div>
-        <svg viewBox="0 0 200 156">
-          <g class="orb" id="orb">
-            <path d="M158.9 114 A68 68 0 1 0 148.2 128" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
-            <path d="M93.6 7.3 A73 73 0 0 1 170.5 61.1" fill="none" stroke="currentColor" stroke-width=".8" stroke-linecap="round" opacity=".7"/>
-          </g>
-          <line x1="-40" y1="122" x2="240" y2="122" stroke="currentColor" stroke-width="2.4"/>
-        </svg>
+        <img id="orb" src="assets/logo-mark.webp" width="1040" height="851" alt="Logo ASUMI: arco Ensō dorato che abbraccia la linea dell'orizzonte" fetchpriority="high">
       </div>
     </div>
   </section>
@@ -489,8 +474,7 @@ dl.where dd{margin:0;color:var(--washi)}
 <footer class="foot">
   <div class="row">
     <a class="brand" href="#inizio" aria-label="ASUMI, torna all'inizio">
-      <svg viewBox="0 0 200 156" aria-hidden="true"><use href="#enso"/></svg>
-      <span>ASUMI</span>
+      <img src="assets/logo-full.webp" width="520" height="455" alt="ASUMI" loading="lazy" decoding="async">
     </a>
     <span class="claim">L'orizzonte non è un limite. È un invito.</span>
   </div>

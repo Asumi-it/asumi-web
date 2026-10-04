@@ -8,11 +8,12 @@ Sito statico, una sola pagina, senza dipendenze esterne (font self-hosted, nessu
 | `index.html` | La landing (con meta SEO, Open Graph e dati strutturati JSON-LD) |
 | `404.html` | Pagina di errore servita da GitHub Pages |
 | `fonts/` | Montserrat, Lora italic, Noto Serif JP (solo i kanji/kana usati) |
-| `favicon.svg`, `favicon-32.png`, `apple-touch-icon.png`, `logo.png` | Icone e logo per Google |
+| `assets/` | Logo ufficiale in WebP (simbolo grande, simbolo piccolo, logo con scritta) |
+| `favicon-32.png`, `favicon-192.png`, `apple-touch-icon.png`, `logo.png` | Icone e logo per Google |
 | `og-image.png` | Anteprima 1200×630 per LinkedIn, WhatsApp, ecc. |
 | `robots.txt`, `sitemap.xml` | Indicizzazione motori di ricerca |
 | `llms.txt` | Sintesi testuale per assistenti AI (GEO) |
-| `CNAME` | Dominio personalizzato per GitHub Pages |
+| `CNAME` | Dominio personalizzato: **da ricreare** con dentro `asumi.it` quando il dominio è acquistato |
 | `.nojekyll` | Pubblica i file così come sono |
 
 ## Pubblicazione su GitHub Pages
@@ -44,5 +45,5 @@ Verifica i valori sulla documentazione GitHub Pages al momento della configurazi
 ## Da aggiornare quando disponibili
 - P.IVA, codice fiscale, numero REA: footer di `index.html` (cerca `DA AGGIORNARE`) e, per la P.IVA, aggiungi `"vatID": "IT..."` e `"taxID": "..."` nell'oggetto Organization del JSON-LD.
 - Email ufficiale: `index.html` (link, tasto Copia, JSON-LD) e `llms.txt`.
-- Logo vettoriale originale: sostituisci il simbolo `#enso` in `index.html` e rigenera le icone.
+- Logo: i file in `assets/` sono estratti dai PNG/JPG HD in `Asumi/resources/`. Con un file vettoriale (SVG/AI/EPS) la resa sarebbe più nitida.
 - Profili LinkedIn dei fondatori, se vuoi: aggiungi `"sameAs": ["https://www.linkedin.com/in/..."]` alle Person del JSON-LD.
