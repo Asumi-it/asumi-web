@@ -43,7 +43,7 @@ Verifica i valori sulla documentazione GitHub Pages al momento della configurazi
 - Controlla i dati strutturati con il Rich Results Test di Google e l'anteprima social con il LinkedIn Post Inspector.
 
 ## Da aggiornare quando disponibili
-- P.IVA, codice fiscale, numero REA: footer di `index.html` (cerca `DA AGGIORNARE`) e, per la P.IVA, aggiungi `"vatID": "IT..."` e `"taxID": "..."` nell'oggetto Organization del JSON-LD.
+- P.IVA e codice fiscale: **inseriti** (18728041007) nel footer, nel JSON-LD (`vatID`, `taxID`) e in `llms.txt`.
 - Email ufficiale: `index.html` (link, tasto Copia, JSON-LD) e `llms.txt`.
 - Logo: i file in `assets/` sono estratti dai PNG/JPG HD in `Asumi/resources/`. Con un file vettoriale (SVG/AI/EPS) la resa sarebbe più nitida.
 - Profili LinkedIn dei fondatori, se vuoi: aggiungi `"sameAs": ["https://www.linkedin.com/in/..."]` alle Person del JSON-LD.

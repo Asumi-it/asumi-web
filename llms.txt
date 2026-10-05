@@ -21,3 +21,8 @@
 - Email: info@asumi.it
 - Sede legale: Strada della Maglianella 16, 00060 Mazzano Romano (RM), Italia
 - Sito: https://asumi.it/
+
+## Dati societari
+- Denominazione: ASUMI S.r.l.
+- P.IVA e codice fiscale: 18728041007
+- Capitale sociale: € 10.000,00
