@@ -196,7 +196,7 @@ rt{font-family:var(--f-kanji);font-weight:200;letter-spacing:.15em}
 .radiant .voice{color:var(--kin-ink)}
 
 /* ——— ma (interludio) ——— */
-.ma{background:var(--washi-2);color:var(--sumi);text-align:left;padding-block:clamp(110px,18vw,240px);padding-inline:var(--gutter);position:relative;overflow:hidden}
+.ma{margin:0;background:var(--washi-2);color:var(--sumi);text-align:left;padding-block:clamp(110px,18vw,240px);padding-inline:var(--gutter);position:relative;overflow:hidden}
 .ma .inner{max-width:1240px;margin-inline:auto;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:32px}
 .ma blockquote{margin:0;font-size:var(--step-3);line-height:1.12;font-weight:200;max-width:16ch}
 .ma blockquote .voice{color:var(--kin-ink)}
@@ -265,6 +265,8 @@ dl.where dd{margin:0;color:var(--washi)}
   .mark{writing-mode:horizontal-tb;font-size:2rem;align-items:center}
   .syll{grid-template-columns:minmax(0,1fr)}
   .syll article+article{border-left:0;border-top:1px solid var(--line-light);padding-left:0}
+  /* kana in verticale (come scrittura giapponese): あ sopra す, colonna di larghezza identica per ASU e MI così i testi restano allineati */
+  .syll .k{writing-mode:vertical-rl;text-orientation:upright;width:1.2em;line-height:1;text-align:start}
   .pillars li{grid-template-columns:72px minmax(0,1fr)}
   .pillars p{grid-column:2;grid-row:2}
   .measure,.contact-grid,.people{grid-template-columns:minmax(0,1fr)}
